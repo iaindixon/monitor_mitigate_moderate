@@ -43,41 +43,44 @@ These instructions assume a Unix-like system.
     $ bash get_executable.bash
     ```
 
-4. Next move into theo `docker` directory and modify `super_loop_experiment.bash` to include the experiment parameters you'd like for this run, then run it and provide an experimental directory name.
+4. From there, you can run any of the experiments (ex. `pre_mitigation.bash`) or modify the generic experiment loader `run_experiment.bash` which triggers the `loop_executable.bash` file. Results of the experiments are placed in `experiment/`, and can then be transfered to the `analysis/data` folder to be observed in R. 
     ```bash
     $ cd docker
-    $ nano super_loop_experiment.bash
-    ...
-    $ bash super_loop_experiment.bash experiment_directory
+    $ bash pre_mitigation.bash
+    $ ls experiment/
+    all_at_once_no_cutoff
     ```
 
 ## Generated Directory Stucture
 
-By default `super_loop_experiment.bash` will create a folder structure like so:
+For an example of generated file structure, we will look at the results of running the `pre_mitigation.bash` file:
 ```
 | experiment
-  |-- experiment_directory
-      |-- rate1
-        |-- window1
-            |-- run1
-                |-- clean_output.csv
-                |-- output.txt
-                |-- influxdb
-                    |-- flink.autogen.00001.00
-                    |-- meta.00
-            |-- run2
-            |-- ...
-        |-- window2
-        |-- ...
-      |-- rate2
-      |-- ...
+  |-- all_at_once_no_cutoff
+      |-- uniform
+        |-- constant
+            |-- 1000
+               |-- 1000.1.5.10
+                  |-- run1
+                     |-- generator.csv
+                     |-- output.txt
+                     |-- ...
+                     |-- influxdb
+                       |-- flink.autogen.00001.00
+                       |-- meta.00
+               |-- 1000.1.10.10
+                  |-- run1/
+               |-- 1000.1.20.10
+                  |-- run1/
 ```
 In the innermost file structure for an individual run given a window and rate parameter, we have
-- `clean_output.csv` which is the mostly sanitised csv removing the non-parameter reporting lines from the console during an experimental run
+- `generator.csv` which is the mostly sanitised csv removing the non-parameter reporting lines from the console during an experimental run
 - `output.txt` which contains the complete dirty console output during an experimental run
 - `influxdb` which is a directory containing a snapshot of the flink metrics db at the end of an experimental run
 
-## Loading Flink Metrics iva InfluxDB
+5. Once we have the custom metrics extracted directly into the run1 folders, we can get the Flink metrics using InfluxDB by running the corresponding `*_metrics.bash` file, so for the above experiment `pre_mitigation.bash` we run the  `pre_mitigation_metrics.bash` file. This also grabs the corresponding experiment file in `experiments/` and moved it into the `analysis/data` folder for analysis in R automatically.
+
+## Manually Loading Flink Metrics iva InfluxDB
 After an experimental run has been conducted we create an `influxdb` folder which contains two files: `flink.autogen.00001.00` and `meta.00`.
 We can load the metrics after a run and extract them into a csv file using the following commands:
 ```bash
