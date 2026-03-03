@@ -1,0 +1,2 @@
+sentence_size,transmission_limit,calibration_size,calibration_type,spacing_method,cutoff_method,rolling_size,work_method,middle_chunk, step_start,num_steps,spike_multiplier,spike_duration,wave_frequency,chain_operators,sleep_amount,window_size,work_frequency, undershoot,rate
+100,60,30,2,0,0,0,0, 0,0,0,0,0,false,20,1000,10, 1,1000

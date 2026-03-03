@@ -1,0 +1,656 @@
+Attaching to docker-jobmanager-1, docker-taskmanager-1, influxdb
+docker-jobmanager-1   | Starting Job Manager
+docker-taskmanager-1  | Starting Task Manager
+influxdb              | influxdb init process in progress...
+docker-jobmanager-1   | Starting standalonejob as a console application on host 92f575efbd8f.
+docker-taskmanager-1  | Starting taskexecutor as a console application on host ff8119042084.
+docker-jobmanager-1   | 2026-03-03 10:57:58,900 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+docker-jobmanager-1   | 2026-03-03 10:57:58,901 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Preconfiguration: 
+docker-jobmanager-1   | 2026-03-03 10:57:58,901 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - 
+docker-jobmanager-1   | 
+docker-jobmanager-1   | 
+docker-jobmanager-1   | RESOURCE_PARAMS extraction logs:
+docker-jobmanager-1   | jvm_params: -Xmx1073741824 -Xms1073741824 -XX:MaxMetaspaceSize=268435456
+docker-jobmanager-1   | dynamic_configs: -D jobmanager.memory.off-heap.size=134217728b -D jobmanager.memory.jvm-overhead.min=201326592b -D jobmanager.memory.jvm-metaspace.size=268435456b -D jobmanager.memory.heap.size=1073741824b -D jobmanager.memory.jvm-overhead.max=201326592b
+docker-jobmanager-1   | logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+docker-jobmanager-1   | INFO  [] - Loading configuration property: blob.server.port, 6124
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.interval, 500 ms
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.host, metri
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.system-resource-probing-interval, 500
+docker-jobmanager-1   | INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.network.memory.max-overdraft-buffers-per-gate, 0
+docker-jobmanager-1   | INFO  [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+docker-jobmanager-1   | INFO  [] - Loading configuration property: execution.buffer-timeout.interval, 0 ms
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.password, ******
+docker-jobmanager-1   | INFO  [] - Loading configuration property: query.server.port, 6125
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.db, flink
+docker-jobmanager-1   | INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.connectTimeout, 60000
+docker-jobmanager-1   | INFO  [] - Loading configuration property: parallelism.default, 1
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.network.memory.floating-buffers-per-gate, 8
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.memory.segment-size, 32 kb
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.username, flink-metrics
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.scheme, http
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.network.memory.buffers-per-channel, 2
+docker-jobmanager-1   | INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+docker-jobmanager-1   | INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+docker-jobmanager-1   | INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.port, 8086
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.retentionPolicy, autogen
+docker-jobmanager-1   | INFO  [] - Loading configuration property: taskmanager.network.detailed-metrics, true
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.writeTimeout, 60000
+docker-jobmanager-1   | INFO  [] - Loading configuration property: rest.address, jobmanager
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.consistency, ANY
+docker-jobmanager-1   | INFO  [] - Loading configuration property: metrics.reporter.influxdb.factory.class, org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+docker-jobmanager-1   | INFO  [] - The derived from fraction jvm overhead memory (160.000mb (167772162 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+docker-jobmanager-1   | INFO  [] - Final Master Memory configuration:
+docker-jobmanager-1   | INFO  [] -   Total Process Memory: 1.563gb (1677721600 bytes)
+docker-jobmanager-1   | INFO  [] -     Total Flink Memory: 1.125gb (1207959552 bytes)
+docker-jobmanager-1   | INFO  [] -       JVM Heap:         1024.000mb (1073741824 bytes)
+docker-jobmanager-1   | INFO  [] -       Off-heap:         128.000mb (134217728 bytes)
+docker-jobmanager-1   | INFO  [] -     JVM Metaspace:      256.000mb (268435456 bytes)
+docker-jobmanager-1   | INFO  [] -     JVM Overhead:       192.000mb (201326592 bytes)
+docker-jobmanager-1   | 
+docker-jobmanager-1   | 
+docker-jobmanager-1   | 2026-03-03 10:57:58,901 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+docker-jobmanager-1   | 2026-03-03 10:57:58,901 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Starting StandaloneApplicationClusterEntryPoint (Version: 1.17.1, Scala: 2.12, Rev:2750d5c, Date:2023-05-19T10:45:46+02:00)
+docker-jobmanager-1   | 2026-03-03 10:57:58,901 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  OS current user: flink
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 11/11.0.20+8
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Arch: aarch64
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Maximum heap size: 1024 MiBytes
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JAVA_HOME: /opt/java/openjdk
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  No Hadoop Dependency available
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  JVM Options:
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xmx1073741824
+docker-jobmanager-1   | 2026-03-03 10:57:58,902 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Xms1073741824
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -XX:MaxMetaspaceSize=268435456
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog.file=/opt/flink/log/flink--standalonejob-0-92f575efbd8f.log
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j-console.properties
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j-console.properties
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback-console.xml
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Program Arguments:
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --configDir
+docker-jobmanager-1   | 2026-03-03 10:57:58,903 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     /opt/flink/conf
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.off-heap.size=134217728b
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.min=201326592b
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-metaspace.size=268435456b
+docker-jobmanager-1   | 2026-03-03 10:57:58,904 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.heap.size=1073741824b
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     -D
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     jobmanager.memory.jvm-overhead.max=201326592b
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --job-classname
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     ncl.scalable.benchmark_bumbles.flink.wordcount.driver.BenchmarkSimulator
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --chain-operators
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     false
+docker-jobmanager-1   | 2026-03-03 10:57:58,905 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --source-rate
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     1000
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --sentence-length
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     100
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --window-size
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     1000
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --window-limit
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     60
+docker-jobmanager-1   | 2026-03-03 10:57:58,906 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --rolling-size
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --spacing-method
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     1
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --cutoff-method
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --arrival-process
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --calibration-size
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     30
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --undershoot-factor
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     1
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --sleep-amount
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     5
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --work-method
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --step-start
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,907 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --spike-multiplier
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --spike-duration
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --work-frequency
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     10
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --middle-chunk
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --num-steps
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --wave-frequency
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     0
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     --calibration-type
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -     2
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] -  Classpath: /opt/flink/lib/flink-cep-1.17.1.jar:/opt/flink/lib/flink-connector-files-1.17.1.jar:/opt/flink/lib/flink-csv-1.17.1.jar:/opt/flink/lib/flink-json-1.17.1.jar:/opt/flink/lib/flink-scala_2.12-1.17.1.jar:/opt/flink/lib/flink-table-api-java-uber-1.17.1.jar:/opt/flink/lib/flink-table-planner-loader-1.17.1.jar:/opt/flink/lib/flink-table-runtime-1.17.1.jar:/opt/flink/lib/log4j-1.2-api-2.17.1.jar:/opt/flink/lib/log4j-api-2.17.1.jar:/opt/flink/lib/log4j-core-2.17.1.jar:/opt/flink/lib/log4j-slf4j-impl-2.17.1.jar:/opt/flink/lib/flink-dist-1.17.1.jar::::
+docker-jobmanager-1   | 2026-03-03 10:57:58,908 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - --------------------------------------------------------------------------------
+docker-jobmanager-1   | 2026-03-03 10:57:58,909 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+docker-jobmanager-1   | 2026-03-03 10:57:58,924 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+docker-jobmanager-1   | 2026-03-03 10:57:58,924 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.interval, 500 ms
+docker-jobmanager-1   | 2026-03-03 10:57:58,924 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.host, metri
+docker-jobmanager-1   | 2026-03-03 10:57:58,924 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.system-resource-probing-interval, 500
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.max-overdraft-buffers-per-gate, 0
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.buffer-timeout.interval, 0 ms
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.password, ******
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+docker-jobmanager-1   | 2026-03-03 10:57:58,925 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.db, flink
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.connectTimeout, 60000
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+docker-jobmanager-1   | 2026-03-03 10:57:58,926 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.floating-buffers-per-gate, 8
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.segment-size, 32 kb
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.username, flink-metrics
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.scheme, http
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.buffers-per-channel, 2
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.port, 8086
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.retentionPolicy, autogen
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.detailed-metrics, true
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.writeTimeout, 60000
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, jobmanager
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.consistency, ANY
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.factory.class, org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.off-heap.size, 134217728b
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.min, 201326592b
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-metaspace.size, 268435456b
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.heap.size, 1073741824b
+docker-jobmanager-1   | 2026-03-03 10:57:58,927 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: jobmanager.memory.jvm-overhead.max, 201326592b
+docker-taskmanager-1  | 2026-03-03 10:57:58,927 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Preconfiguration: 
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - 
+docker-taskmanager-1  | 
+docker-taskmanager-1  | 
+docker-taskmanager-1  | RESOURCE_PARAMS extraction logs:
+docker-taskmanager-1  | jvm_params: -Xmx536870902 -Xms536870902 -XX:MaxDirectMemorySize=268435458 -XX:MaxMetaspaceSize=268435456
+docker-taskmanager-1  | dynamic_configs: -D taskmanager.memory.network.min=134217730b -D taskmanager.cpu.cores=1.0 -D taskmanager.memory.task.off-heap.size=0b -D taskmanager.memory.jvm-metaspace.size=268435456b -D external-resources=none -D taskmanager.memory.jvm-overhead.min=201326592b -D taskmanager.memory.framework.off-heap.size=134217728b -D taskmanager.memory.network.max=134217730b -D taskmanager.memory.framework.heap.size=134217728b -D taskmanager.memory.managed.size=536870920b -D taskmanager.memory.task.heap.size=402653174b -D taskmanager.numberOfTaskSlots=1 -D taskmanager.memory.jvm-overhead.max=201326592b
+docker-taskmanager-1  | logs: WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+docker-taskmanager-1  | INFO  [] - Loading configuration property: blob.server.port, 6124
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.interval, 500 ms
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.host, metri
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.system-resource-probing-interval, 500
+docker-taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.network.memory.max-overdraft-buffers-per-gate, 0
+docker-taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+docker-taskmanager-1  | INFO  [] - Loading configuration property: execution.buffer-timeout.interval, 0 ms
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.password, ******
+docker-taskmanager-1  | INFO  [] - Loading configuration property: query.server.port, 6125
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.db, flink
+docker-taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.connectTimeout, 60000
+docker-taskmanager-1  | INFO  [] - Loading configuration property: parallelism.default, 1
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.network.memory.floating-buffers-per-gate, 8
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.memory.segment-size, 32 kb
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.username, flink-metrics
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.scheme, http
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.network.memory.buffers-per-channel, 2
+docker-taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+docker-taskmanager-1  | INFO  [] - Loading configuration property: jobmanager.rpc.port, 6123
+docker-taskmanager-1  | INFO  [] - Loading configuration property: rest.bind-address, 0.0.0.0
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.port, 8086
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.retentionPolicy, autogen
+docker-taskmanager-1  | INFO  [] - Loading configuration property: taskmanager.network.detailed-metrics, true
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.writeTimeout, 60000
+docker-taskmanager-1  | INFO  [] - Loading configuration property: rest.address, 0.0.0.0
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.consistency, ANY
+docker-taskmanager-1  | INFO  [] - Loading configuration property: metrics.reporter.influxdb.factory.class, org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+docker-taskmanager-1  | INFO  [] - The derived from fraction jvm overhead memory (172.800mb (181193935 bytes)) is less than its min value 192.000mb (201326592 bytes), min value will be used instead
+docker-taskmanager-1  | INFO  [] - Final TaskExecutor Memory configuration:
+docker-taskmanager-1  | INFO  [] -   Total Process Memory:          1.688gb (1811939328 bytes)
+docker-taskmanager-1  | INFO  [] -     Total Flink Memory:          1.250gb (1342177280 bytes)
+docker-taskmanager-1  | INFO  [] -       Total JVM Heap Memory:     512.000mb (536870902 bytes)
+docker-taskmanager-1  | INFO  [] -         Framework:               128.000mb (134217728 bytes)
+docker-taskmanager-1  | INFO  [] -         Task:                    384.000mb (402653174 bytes)
+docker-taskmanager-1  | INFO  [] -       Total Off-heap Memory:     768.000mb (805306378 bytes)
+docker-taskmanager-1  | INFO  [] -         Managed:                 512.000mb (536870920 bytes)
+docker-taskmanager-1  | INFO  [] -         Total JVM Direct Memory: 256.000mb (268435458 bytes)
+docker-taskmanager-1  | INFO  [] -           Framework:             128.000mb (134217728 bytes)
+docker-taskmanager-1  | INFO  [] -           Task:                  0 bytes
+docker-taskmanager-1  | INFO  [] -           Network:               128.000mb (134217730 bytes)
+docker-taskmanager-1  | INFO  [] -     JVM Metaspace:               256.000mb (268435456 bytes)
+docker-taskmanager-1  | INFO  [] -     JVM Overhead:                192.000mb (201326592 bytes)
+docker-taskmanager-1  | 
+docker-taskmanager-1  | 
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Starting TaskManager (Version: 1.17.1, Scala: 2.12, Rev:2750d5c, Date:2023-05-19T10:45:46+02:00)
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  OS current user: flink
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Current Hadoop/Kerberos user: <no hadoop dependency found>
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM: OpenJDK 64-Bit Server VM - Eclipse Adoptium - 11/11.0.20+8
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Arch: aarch64
+docker-taskmanager-1  | 2026-03-03 10:57:58,929 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Maximum heap size: 512 MiBytes
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JAVA_HOME: /opt/java/openjdk
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  No Hadoop Dependency available
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  JVM Options:
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:+UseG1GC
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xmx536870902
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Xms536870902
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxDirectMemorySize=268435458
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -XX:MaxMetaspaceSize=268435456
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog.file=/opt/flink/log/flink--taskexecutor-0-ff8119042084.log
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configuration=file:/opt/flink/conf/log4j-console.properties
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlog4j.configurationFile=file:/opt/flink/conf/log4j-console.properties
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -Dlogback.configurationFile=file:/opt/flink/conf/logback-console.xml
+docker-taskmanager-1  | 2026-03-03 10:57:58,930 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Program Arguments:
+docker-taskmanager-1  | 2026-03-03 10:57:58,931 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     --configDir
+docker-taskmanager-1  | 2026-03-03 10:57:58,931 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     /opt/flink/conf
+docker-taskmanager-1  | 2026-03-03 10:57:58,931 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,931 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.min=134217730b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.cpu.cores=1.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.off-heap.size=0b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-metaspace.size=268435456b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     external-resources=none
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.min=201326592b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.off-heap.size=134217728b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.network.max=134217730b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.framework.heap.size=134217728b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.managed.size=536870920b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.task.heap.size=402653174b
+docker-taskmanager-1  | 2026-03-03 10:57:58,932 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.numberOfTaskSlots=1
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     -D
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -     taskmanager.memory.jvm-overhead.max=201326592b
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] -  Classpath: /opt/flink/lib/flink-cep-1.17.1.jar:/opt/flink/lib/flink-connector-files-1.17.1.jar:/opt/flink/lib/flink-csv-1.17.1.jar:/opt/flink/lib/flink-json-1.17.1.jar:/opt/flink/lib/flink-scala_2.12-1.17.1.jar:/opt/flink/lib/flink-table-api-java-uber-1.17.1.jar:/opt/flink/lib/flink-table-planner-loader-1.17.1.jar:/opt/flink/lib/flink-table-runtime-1.17.1.jar:/opt/flink/lib/log4j-1.2-api-2.17.1.jar:/opt/flink/lib/log4j-api-2.17.1.jar:/opt/flink/lib/log4j-core-2.17.1.jar:/opt/flink/lib/log4j-slf4j-impl-2.17.1.jar:/opt/flink/lib/flink-dist-1.17.1.jar::::
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - --------------------------------------------------------------------------------
+docker-taskmanager-1  | 2026-03-03 10:57:58,933 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Registered UNIX signal handlers for [TERM, HUP, INT]
+docker-taskmanager-1  | 2026-03-03 10:57:58,934 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Maximum number of open file descriptors is 1048576.
+docker-taskmanager-1  | 2026-03-03 10:57:58,938 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: blob.server.port, 6124
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.interval, 500 ms
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.host, metri
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.system-resource-probing-interval, 500
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.execution.failover-strategy, region
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.max-overdraft-buffers-per-gate, 0
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.address, jobmanager
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: execution.buffer-timeout.interval, 0 ms
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.password, ******
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: query.server.port, 6125
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.db, flink
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.bind-host, 0.0.0.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.connectTimeout, 60000
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: parallelism.default, 1
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.numberOfTaskSlots, 1
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.process.size, 1728m
+docker-taskmanager-1  | 2026-03-03 10:57:58,939 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.floating-buffers-per-gate, 8
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.bind-host, 0.0.0.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.memory.segment-size, 32 kb
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.username, flink-metrics
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.scheme, http
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.memory.buffers-per-channel, 2
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.memory.process.size, 1600m
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: jobmanager.rpc.port, 6123
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.bind-address, 0.0.0.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.port, 8086
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.retentionPolicy, autogen
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: taskmanager.network.detailed-metrics, true
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.writeTimeout, 60000
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: rest.address, 0.0.0.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.consistency, ANY
+docker-taskmanager-1  | 2026-03-03 10:57:58,940 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading configuration property: metrics.reporter.influxdb.factory.class, org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.min, 134217730b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-metaspace.size, 268435456b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.off-heap.size, 0b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.cpu.cores, 1.0
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: external-resources, none
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.min, 201326592b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.off-heap.size, 134217728b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.network.max, 134217730b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.framework.heap.size, 134217728b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.managed.size, 536870920b
+docker-taskmanager-1  | 2026-03-03 10:57:58,941 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.task.heap.size, 402653174b
+docker-taskmanager-1  | 2026-03-03 10:57:58,942 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.numberOfTaskSlots, 1
+docker-taskmanager-1  | 2026-03-03 10:57:58,942 INFO  org.apache.flink.configuration.GlobalConfiguration           [] - Loading dynamic configuration property: taskmanager.memory.jvm-overhead.max, 201326592b
+docker-taskmanager-1  | 2026-03-03 10:57:58,969 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+docker-taskmanager-1  | 2026-03-03 10:57:58,985 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+docker-taskmanager-1  | 2026-03-03 10:57:58,989 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+docker-taskmanager-1  | 2026-03-03 10:57:58,990 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+docker-taskmanager-1  | 2026-03-03 10:57:59,011 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+docker-taskmanager-1  | 2026-03-03 10:57:59,012 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-taskmanager-1  | 2026-03-03 10:57:59,012 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-taskmanager-1  | 2026-03-03 10:57:59,012 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-taskmanager-1  | 2026-03-03 10:57:59,012 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-taskmanager-1  | 2026-03-03 10:57:59,013 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-taskmanager-1  | 2026-03-03 10:57:59,013 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-taskmanager-1  | 2026-03-03 10:57:59,013 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-taskmanager-1  | 2026-03-03 10:57:59,013 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-taskmanager-1  | 2026-03-03 10:57:59,013 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - StateChangelogStorageLoader initialized with shortcut names {memory,filesystem}.
+docker-taskmanager-1  | 2026-03-03 10:57:59,023 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+docker-taskmanager-1  | 2026-03-03 10:57:59,032 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-13171831020673404732.conf.
+influxdb              | /init-influxdb.sh: ignoring /docker-entrypoint-initdb.d/*
+influxdb              | 
+influxdb              | 
+docker-taskmanager-1  | 2026-03-03 10:57:59,038 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+docker-jobmanager-1   | 2026-03-03 10:57:59,045 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Starting StandaloneApplicationClusterEntryPoint.
+docker-jobmanager-1   | 2026-03-03 10:57:59,054 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install default filesystem.
+docker-jobmanager-1   | 2026-03-03 10:57:59,055 INFO  org.apache.flink.core.fs.FileSystem                          [] - Hadoop is not in the classpath/dependencies. The extended set of supported File Systems via Hadoop is not available.
+docker-jobmanager-1   | 2026-03-03 10:57:59,064 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-slf4j
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-influx
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-prometheus
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-datadog
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: external-resource-gpu
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-statsd
+docker-jobmanager-1   | 2026-03-03 10:57:59,068 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-graphite
+docker-jobmanager-1   | 2026-03-03 10:57:59,069 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID not found, creating it: metrics-jmx
+docker-jobmanager-1   | 2026-03-03 10:57:59,077 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Install security context.
+docker-jobmanager-1   | 2026-03-03 10:57:59,085 INFO  org.apache.flink.runtime.security.modules.HadoopModuleFactory [] - Cannot create Hadoop Security Module because Hadoop cannot be found in the Classpath.
+docker-jobmanager-1   | 2026-03-03 10:57:59,088 INFO  org.apache.flink.runtime.security.modules.JaasModule         [] - Jaas file will be created as /tmp/jaas-3795142110203178682.conf.
+docker-jobmanager-1   | 2026-03-03 10:57:59,092 INFO  org.apache.flink.runtime.security.contexts.HadoopSecurityContextFactory [] - Cannot install HadoopSecurityContext because Hadoop cannot be found in the Classpath.
+docker-jobmanager-1   | 2026-03-03 10:57:59,093 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Initializing cluster services.
+docker-jobmanager-1   | 2026-03-03 10:57:59,096 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Using working directory: WorkingDirectory(/tmp/jm_f956923b5f2ec4d0b48def572cb56e33).
+docker-taskmanager-1  | 2026-03-03 10:57:59,311 INFO  org.apache.flink.runtime.util.LeaderRetrievalUtils           [] - Trying to select the network interface and address to use by connecting to the leading JobManager.
+docker-taskmanager-1  | 2026-03-03 10:57:59,312 INFO  org.apache.flink.runtime.util.LeaderRetrievalUtils           [] - TaskManager will try to connect for PT10S before falling back to heuristics
+docker-jobmanager-1   | 2026-03-03 10:57:59,356 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address jobmanager:6123, bind address 0.0.0.0:6123.
+docker-jobmanager-1   | 2026-03-03 10:57:59,684 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+docker-jobmanager-1   | 2026-03-03 10:57:59,697 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+docker-jobmanager-1   | 2026-03-03 10:57:59,697 INFO  akka.remote.Remoting                                         [] - Starting remoting
+docker-jobmanager-1   | 2026-03-03 10:57:59,767 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@jobmanager:6123]
+docker-taskmanager-1  | 2026-03-03 10:57:59,780 INFO  org.apache.flink.runtime.net.ConnectionUtils                 [] - Trying to connect to address jobmanager/172.18.0.2:6123
+docker-taskmanager-1  | 2026-03-03 10:57:59,780 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - TaskManager will use hostname/address 'ff8119042084' (172.18.0.3) for communication.
+docker-taskmanager-1  | 2026-03-03 10:57:59,801 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address 172.18.0.3:0, bind address 0.0.0.0:0.
+docker-jobmanager-1   | 2026-03-03 10:57:59,831 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@jobmanager:6123
+docker-jobmanager-1   | 2026-03-03 10:57:59,838 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Loading delegation token providers
+docker-jobmanager-1   | 2026-03-03 10:57:59,841 INFO  org.apache.flink.runtime.security.token.hadoop.HadoopFSDelegationTokenProvider [] - Hadoop FS is not available (not packaged with this application): NoClassDefFoundError : "org/apache/hadoop/conf/Configuration".
+docker-jobmanager-1   | 2026-03-03 10:57:59,841 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hadoopfs loaded and initialized
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token provider hbase loaded and initialized
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-jobmanager-1   | 2026-03-03 10:57:59,842 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-jobmanager-1   | 2026-03-03 10:57:59,843 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-jobmanager-1   | 2026-03-03 10:57:59,843 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-jobmanager-1   | 2026-03-03 10:57:59,843 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation token providers loaded successfully
+docker-jobmanager-1   | 2026-03-03 10:57:59,844 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-jobmanager-1   | 2026-03-03 10:57:59,845 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-jobmanager-1   | 2026-03-03 10:57:59,846 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+docker-jobmanager-1   | 2026-03-03 10:57:59,846 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Checking provider and receiver instances consistency
+docker-jobmanager-1   | 2026-03-03 10:57:59,846 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Provider and receiver instances are consistent
+docker-jobmanager-1   | 2026-03-03 10:57:59,846 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Obtaining delegation tokens
+docker-jobmanager-1   | 2026-03-03 10:57:59,847 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Delegation tokens obtained successfully
+docker-jobmanager-1   | 2026-03-03 10:57:59,847 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+docker-jobmanager-1   | 2026-03-03 10:57:59,857 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Created BLOB server storage directory /tmp/jm_f956923b5f2ec4d0b48def572cb56e33/blobStorage
+docker-jobmanager-1   | 2026-03-03 10:57:59,859 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Started BLOB server at 0.0.0.0:6124 - max concurrent requests: 50 - max backlog: 1000
+docker-jobmanager-1   | 2026-03-03 10:57:59,866 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-jobmanager-1   | 2026-03-03 10:57:59,867 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-jobmanager-1   | 2026-03-03 10:57:59,868 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-jobmanager-1   | 2026-03-03 10:58:00,069 INFO  org.apache.flink.metrics.influxdb.InfluxdbReporter           [] - Configured InfluxDBReporter with {host:metri, port:8086, db:flink, retentionPolicy:autogen and consistency:ANY}
+docker-jobmanager-1   | 2026-03-03 10:58:00,070 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - Periodically reporting metrics in intervals of 500 ms for reporter influxdb of type org.apache.flink.metrics.influxdb.InfluxdbReporter.
+docker-jobmanager-1   | 2026-03-03 10:58:00,073 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address jobmanager:0, bind address 0.0.0.0:0.
+docker-taskmanager-1  | 2026-03-03 10:58:00,099 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+docker-jobmanager-1   | 2026-03-03 10:58:00,100 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+docker-jobmanager-1   | 2026-03-03 10:58:00,103 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+docker-jobmanager-1   | 2026-03-03 10:58:00,103 INFO  akka.remote.Remoting                                         [] - Starting remoting
+docker-jobmanager-1   | 2026-03-03 10:58:00,112 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@jobmanager:45477]
+docker-taskmanager-1  | 2026-03-03 10:58:00,114 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+docker-taskmanager-1  | 2026-03-03 10:58:00,115 INFO  akka.remote.Remoting                                         [] - Starting remoting
+docker-jobmanager-1   | 2026-03-03 10:58:00,118 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@jobmanager:45477
+docker-jobmanager-1   | 2026-03-03 10:58:00,124 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService .
+docker-taskmanager-1  | 2026-03-03 10:58:00,183 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink@172.18.0.3:41069]
+docker-jobmanager-1   | 2026-03-03 10:58:00,194 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Upload directory /tmp/flink-web-45743459-ab2e-4ae8-8451-c6601ea1d257/flink-web-upload does not exist. 
+docker-jobmanager-1   | 2026-03-03 10:58:00,195 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Created directory /tmp/flink-web-45743459-ab2e-4ae8-8451-c6601ea1d257/flink-web-upload for file uploads.
+docker-jobmanager-1   | 2026-03-03 10:58:00,197 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Starting rest endpoint.
+docker-taskmanager-1  | 2026-03-03 10:58:00,237 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink@172.18.0.3:41069
+docker-taskmanager-1  | 2026-03-03 10:58:00,245 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Using working directory: WorkingDirectory(/tmp/tm_172.18.0.3:41069-d6420b)
+docker-taskmanager-1  | 2026-03-03 10:58:00,250 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-taskmanager-1  | 2026-03-03 10:58:00,251 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-jobmanager-1   | 2026-03-03 10:58:00,373 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component log file: /opt/flink/log/flink--standalonejob-0-92f575efbd8f.log
+docker-jobmanager-1   | 2026-03-03 10:58:00,373 INFO  org.apache.flink.runtime.webmonitor.WebMonitorUtils          [] - Determined location of main cluster component stdout file: /opt/flink/log/flink--standalonejob-0-92f575efbd8f.out
+docker-taskmanager-1  | 2026-03-03 10:58:00,402 INFO  org.apache.flink.metrics.influxdb.InfluxdbReporter           [] - Configured InfluxDBReporter with {host:metri, port:8086, db:flink, retentionPolicy:autogen and consistency:ANY}
+docker-taskmanager-1  | 2026-03-03 10:58:00,404 INFO  org.apache.flink.runtime.metrics.MetricRegistryImpl          [] - Periodically reporting metrics in intervals of 500 ms for reporter influxdb of type org.apache.flink.metrics.influxdb.InfluxdbReporter.
+docker-taskmanager-1  | 2026-03-03 10:58:00,408 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Trying to start actor system, external address 172.18.0.3:0, bind address 0.0.0.0:0.
+docker-taskmanager-1  | 2026-03-03 10:58:00,417 INFO  akka.event.slf4j.Slf4jLogger                                 [] - Slf4jLogger started
+docker-taskmanager-1  | 2026-03-03 10:58:00,427 INFO  akka.remote.RemoteActorRefProvider                           [] - Akka Cluster not in use - enabling unsafe features anyway because `akka.remote.use-unsafe-remote-features-outside-cluster` has been enabled.
+docker-taskmanager-1  | 2026-03-03 10:58:00,428 INFO  akka.remote.Remoting                                         [] - Starting remoting
+docker-taskmanager-1  | 2026-03-03 10:58:00,436 INFO  akka.remote.Remoting                                         [] - Remoting started; listening on addresses :[akka.tcp://flink-metrics@172.18.0.3:45709]
+docker-taskmanager-1  | 2026-03-03 10:58:00,440 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcServiceUtils        [] - Actor system started at akka.tcp://flink-metrics@172.18.0.3:45709
+docker-taskmanager-1  | 2026-03-03 10:58:00,446 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.metrics.dump.MetricQueryService at akka://flink-metrics/user/rpc/MetricQueryService_172.18.0.3:41069-d6420b .
+docker-taskmanager-1  | 2026-03-03 10:58:00,452 INFO  org.apache.flink.runtime.blob.PermanentBlobCache             [] - Created BLOB cache storage directory /tmp/tm_172.18.0.3:41069-d6420b/blobStorage
+docker-jobmanager-1   | 2026-03-03 10:58:00,453 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Rest endpoint listening at jobmanager:8081
+docker-jobmanager-1   | 2026-03-03 10:58:00,453 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - http://jobmanager:8081 was granted leadership with leaderSessionID=00000000-0000-0000-0000-000000000000
+docker-taskmanager-1  | 2026-03-03 10:58:00,454 INFO  org.apache.flink.runtime.blob.TransientBlobCache             [] - Created BLOB cache storage directory /tmp/tm_172.18.0.3:41069-d6420b/blobStorage
+docker-jobmanager-1   | 2026-03-03 10:58:00,454 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Web frontend listening at http://jobmanager:8081.
+docker-taskmanager-1  | 2026-03-03 10:58:00,456 INFO  org.apache.flink.runtime.externalresource.ExternalResourceUtils [] - Enabled external resources: []
+docker-taskmanager-1  | 2026-03-03 10:58:00,457 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Loading delegation token receivers
+docker-taskmanager-1  | 2026-03-03 10:58:00,458 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hadoopfs loaded and initialized
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receiver hbase loaded and initialized
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-slf4j
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-influx
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-prometheus
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-datadog
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: external-resource-gpu
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-statsd
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-graphite
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.core.plugin.DefaultPluginManager            [] - Plugin loader with ID found, reusing it: metrics-jmx
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.runtime.security.token.DelegationTokenReceiverRepository [] - Delegation token receivers loaded successfully
+docker-taskmanager-1  | 2026-03-03 10:58:00,459 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerRunner      [] - Starting TaskManager with ResourceID: 172.18.0.3:41069-d6420b
+docker-jobmanager-1   | 2026-03-03 10:58:00,463 INFO  org.apache.flink.runtime.dispatcher.runner.DefaultDispatcherRunner [] - DefaultDispatcherRunner was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new DispatcherLeaderProcess.
+docker-jobmanager-1   | 2026-03-03 10:58:00,465 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Start SessionDispatcherLeaderProcess.
+docker-jobmanager-1   | 2026-03-03 10:58:00,466 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Starting resource manager service.
+docker-jobmanager-1   | 2026-03-03 10:58:00,470 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is granted leadership with session id 00000000-0000-0000-0000-000000000000.
+docker-taskmanager-1  | 2026-03-03 10:58:00,471 INFO  org.apache.flink.runtime.taskexecutor.TaskManagerServices    [] - Temporary file directory '/tmp': total 58 GB, usable 44 GB (75.86% usable)
+docker-jobmanager-1   | 2026-03-03 10:58:00,470 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Recover all persisted job graphs that are not finished, yet.
+docker-jobmanager-1   | 2026-03-03 10:58:00,471 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Successfully recovered 0 persisted job graphs.
+docker-taskmanager-1  | 2026-03-03 10:58:00,473 INFO  org.apache.flink.runtime.io.disk.iomanager.IOManager         [] - Created a new FileChannelManager for spilling of task related data to disk (joins, sorting, ...). Used directories:
+docker-taskmanager-1  | 	/tmp/flink-io-890b8cb6-a30c-4e08-878c-c393c1efe1de
+docker-taskmanager-1  | 2026-03-03 10:58:00,480 INFO  org.apache.flink.runtime.io.network.netty.NettyConfig        [] - NettyConfig [server address: /0.0.0.0, server port: 0, ssl enabled: false, memory segment size (bytes): 32768, transport type: AUTO, number of server threads: 1 (manual), number of client threads: 1 (manual), server connect backlog: 0 (use Netty's default), client connect timeout (sec): 120, send/receive buffer size (bytes): 0 (use Netty's default)]
+docker-jobmanager-1   | 2026-03-03 10:58:00,481 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.dispatcher.StandaloneDispatcher at akka://flink/user/rpc/dispatcher_0 .
+docker-jobmanager-1   | 2026-03-03 10:58:00,487 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.resourcemanager.StandaloneResourceManager at akka://flink/user/rpc/resourcemanager_1 .
+docker-jobmanager-1   | 2026-03-03 10:58:00,495 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Starting the resource manager.
+docker-jobmanager-1   | 2026-03-03 10:58:00,505 INFO  org.apache.flink.client.ClientUtils                          [] - Starting program (detached: true)
+docker-jobmanager-1   | 2026-03-03 10:58:00,507 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Starting tokens update task
+docker-jobmanager-1   | 2026-03-03 10:58:00,507 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - No tokens obtained so skipping notifications
+docker-jobmanager-1   | 2026-03-03 10:58:00,507 WARN  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Tokens update task not started because either no tokens obtained or none of the tokens specified its renewal date
+docker-taskmanager-1  | 2026-03-03 10:58:00,533 INFO  org.apache.flink.runtime.io.network.NettyShuffleServiceFactory [] - Created a new FileChannelManager for storing result partitions of BLOCKING shuffles. Used directories:
+docker-taskmanager-1  | 	/tmp/flink-netty-shuffle-ac5fa674-1025-4477-bc47-0be3a94615bb
+docker-taskmanager-1  | 2026-03-03 10:58:00,658 INFO  org.apache.flink.runtime.io.network.buffer.NetworkBufferPool [] - Allocated 128 MB for network buffer pool (number of memory segments: 4096, bytes per segment: 32768).
+docker-taskmanager-1  | 2026-03-03 10:58:00,667 INFO  org.apache.flink.runtime.io.network.NettyShuffleEnvironment  [] - Starting the network environment and its components.
+docker-taskmanager-1  | 2026-03-03 10:58:00,698 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Transport type 'auto': using NIO.
+docker-taskmanager-1  | 2026-03-03 10:58:00,699 INFO  org.apache.flink.runtime.io.network.netty.NettyClient        [] - Successful initialization (took 31 ms).
+docker-taskmanager-1  | 2026-03-03 10:58:00,701 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Transport type 'auto': using NIO.
+docker-taskmanager-1  | 2026-03-03 10:58:00,734 INFO  org.apache.flink.runtime.io.network.netty.NettyServer        [] - Successful initialization (took 33 ms). Listening on SocketAddress /0.0.0.0:46001.
+docker-taskmanager-1  | 2026-03-03 10:58:00,734 INFO  org.apache.flink.runtime.taskexecutor.KvStateService         [] - Starting the kvState service and its components.
+docker-taskmanager-1  | 2026-03-03 10:58:00,750 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.taskexecutor.TaskExecutor at akka://flink/user/rpc/taskmanager_0 .
+docker-taskmanager-1  | 2026-03-03 10:58:00,759 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Start job leader service.
+docker-taskmanager-1  | 2026-03-03 10:58:00,760 INFO  org.apache.flink.runtime.filecache.FileCache                 [] - User file cache uses directory /tmp/flink-dist-cache-08424a30-042f-4a14-9525-2bb1bfb534a6
+docker-taskmanager-1  | 2026-03-03 10:58:00,761 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Connecting to ResourceManager akka.tcp://flink@jobmanager:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000).
+docker-taskmanager-1  | 2026-03-03 10:58:00,866 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Resolved ResourceManager address, beginning registration
+docker-jobmanager-1   | 2026-03-03 10:58:00,909 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering TaskManager with ResourceID 172.18.0.3:41069-d6420b (akka.tcp://flink@172.18.0.3:41069/user/rpc/taskmanager_0) at ResourceManager
+docker-taskmanager-1  | 2026-03-03 10:58:00,916 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Successful registration at resource manager akka.tcp://flink@jobmanager:6123/user/rpc/resourcemanager_* under registration id 63c9ecfc70e73a1c58c20f74592cc476.
+docker-jobmanager-1   | 2026-03-03 10:58:01,049 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Job cf131c07b0ac183c96f31bda78c5f88c is submitted.
+docker-jobmanager-1   | 2026-03-03 10:58:01,049 INFO  org.apache.flink.client.deployment.application.executors.EmbeddedExecutor [] - Submitting Job with JobId=cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 10:58:01,053 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Received JobGraph submission 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,053 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Submitting job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,059 INFO  org.apache.flink.runtime.jobmaster.JobMasterServiceLeadershipRunner [] - JobMasterServiceLeadershipRunner for job cf131c07b0ac183c96f31bda78c5f88c was granted leadership with leader id 00000000-0000-0000-0000-000000000000. Creating new JobMasterServiceProcess.
+docker-jobmanager-1   | 2026-03-03 10:58:01,065 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Starting RPC endpoint for org.apache.flink.runtime.jobmaster.JobMaster at akka://flink/user/rpc/jobmanager_2 .
+docker-jobmanager-1   | 2026-03-03 10:58:01,068 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Initializing job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,077 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using restart back off time strategy NoRestartBackoffTimeStrategy for Rate-controlled Streaming WordCount (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,089 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Created execution graph 6d43fe17fc92a44e5374108eaf11c151 for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 10:58:01,098 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Running initialization on master for job Rate-controlled Streaming WordCount (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,098 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Successfully ran initialization on master in 0 ms.
+docker-jobmanager-1   | 2026-03-03 10:58:01,108 INFO  org.apache.flink.runtime.scheduler.adapter.DefaultExecutionTopology [] - Built 1 new pipelined regions in 0 ms, total 1 pipelined regions currently.
+docker-jobmanager-1   | 2026-03-03 10:58:01,111 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@16613812
+docker-jobmanager-1   | 2026-03-03 10:58:01,111 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+docker-jobmanager-1   | 2026-03-03 10:58:01,111 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Checkpoint storage is set to 'jobmanager'
+docker-jobmanager-1   | 2026-03-03 10:58:01,131 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - No checkpoint found during restore.
+docker-jobmanager-1   | 2026-03-03 10:58:01,134 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Using failover strategy org.apache.flink.runtime.executiongraph.failover.flip1.RestartPipelinedRegionFailoverStrategy@7e91ac7a for Rate-controlled Streaming WordCount (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 10:58:01,139 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting execution of job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c) under job master id 00000000000000000000000000000000.
+docker-jobmanager-1   | 2026-03-03 10:58:01,140 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Starting scheduling with scheduling strategy [org.apache.flink.runtime.scheduler.strategy.PipelinedRegionSchedulingStrategy]
+docker-jobmanager-1   | 2026-03-03 10:58:01,141 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Rate-controlled Streaming WordCount (cf131c07b0ac183c96f31bda78c5f88c) switched from state CREATED to RUNNING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,142 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Source (1/1) (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to SCHEDULED.
+docker-jobmanager-1   | 2026-03-03 10:58:01,142 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Work (1/1) (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from CREATED to SCHEDULED.
+docker-jobmanager-1   | 2026-03-03 10:58:01,142 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Sink (1/1) (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from CREATED to SCHEDULED.
+docker-jobmanager-1   | 2026-03-03 10:58:01,148 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Connecting to ResourceManager akka.tcp://flink@jobmanager:6123/user/rpc/resourcemanager_*(00000000000000000000000000000000)
+docker-jobmanager-1   | 2026-03-03 10:58:01,150 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Resolved ResourceManager address, beginning registration
+docker-jobmanager-1   | 2026-03-03 10:58:01,151 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registering job manager 00000000000000000000000000000000@akka.tcp://flink@jobmanager:6123/user/rpc/jobmanager_2 for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 10:58:01,153 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Registered job manager 00000000000000000000000000000000@akka.tcp://flink@jobmanager:6123/user/rpc/jobmanager_2 for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 10:58:01,154 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - JobManager successfully registered at ResourceManager, leader id: 00000000000000000000000000000000.
+docker-jobmanager-1   | 2026-03-03 10:58:01,155 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Received resource requirements from job cf131c07b0ac183c96f31bda78c5f88c: [ResourceRequirement{resourceProfile=ResourceProfile{UNKNOWN}, numberOfRequiredSlots=1}]
+docker-taskmanager-1  | 2026-03-03 10:58:01,224 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Receive slot request 1cf9a27df408ce7d3d2a444335bc672d for job cf131c07b0ac183c96f31bda78c5f88c from resource manager with leader id 00000000000000000000000000000000.
+docker-taskmanager-1  | 2026-03-03 10:58:01,226 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Allocated slot for 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,227 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Add job cf131c07b0ac183c96f31bda78c5f88c for job leader monitoring.
+docker-taskmanager-1  | 2026-03-03 10:58:01,228 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Try to register at job manager akka.tcp://flink@jobmanager:6123/user/rpc/jobmanager_2 with leader id 00000000-0000-0000-0000-000000000000.
+docker-taskmanager-1  | 2026-03-03 10:58:01,235 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Resolved JobManager address, beginning registration
+docker-taskmanager-1  | 2026-03-03 10:58:01,245 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Successful registration at job manager akka.tcp://flink@jobmanager:6123/user/rpc/jobmanager_2 for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-taskmanager-1  | 2026-03-03 10:58:01,246 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Establish JobManager connection for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-taskmanager-1  | 2026-03-03 10:58:01,247 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Offer reserved slots to the leader of job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 10:58:01,252 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Source (1/1) (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from SCHEDULED to DEPLOYING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,253 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Source: Source (1/1) (attempt #0) with attempt id 6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0 and vertex id bc764cd8ddf7a0cff126f51c16239658_0 to 172.18.0.3:41069-d6420b @ docker-taskmanager-1.docker_default (dataPort=46001) with allocation id 1cf9a27df408ce7d3d2a444335bc672d
+docker-jobmanager-1   | 2026-03-03 10:58:01,272 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Work (1/1) (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from SCHEDULED to DEPLOYING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,272 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Work (1/1) (attempt #0) with attempt id 6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0 and vertex id 0a448493b4782967b150582570326227_0 to 172.18.0.3:41069-d6420b @ docker-taskmanager-1.docker_default (dataPort=46001) with allocation id 1cf9a27df408ce7d3d2a444335bc672d
+docker-jobmanager-1   | 2026-03-03 10:58:01,277 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Sink (1/1) (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from SCHEDULED to DEPLOYING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,277 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Deploying Sink: Sink (1/1) (attempt #0) with attempt id 6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0 and vertex id ea632d67b7d595e5b851708ae9ad79d6_0 to 172.18.0.3:41069-d6420b @ docker-taskmanager-1.docker_default (dataPort=46001) with allocation id 1cf9a27df408ce7d3d2a444335bc672d
+docker-taskmanager-1  | 2026-03-03 10:58:01,284 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,286 INFO  org.apache.flink.runtime.blob.BlobClient                     [] - Downloading cf131c07b0ac183c96f31bda78c5f88c/p-7997e8c4f5142420f61744d900610054c1bd35c3-ad7a12d843242ca064cad7cf18dfc0d1 from jobmanager/172.18.0.2:6124
+docker-taskmanager-1  | 2026-03-03 10:58:01,335 INFO  org.apache.flink.runtime.state.changelog.StateChangelogStorageLoader [] - Creating a changelog storage with name 'memory'.
+docker-taskmanager-1  | 2026-03-03 10:58:01,339 INFO  org.apache.flink.runtime.state.TaskExecutorChannelStateExecutorFactoryManager [] - Creating the channel state executor factory for job id cf131c07b0ac183c96f31bda78c5f88c
+docker-taskmanager-1  | 2026-03-03 10:58:01,346 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0), deploy into slot with allocation id 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,346 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from CREATED to DEPLOYING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,347 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,349 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) [DEPLOYING].
+docker-taskmanager-1  | 2026-03-03 10:58:01,358 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0), deploy into slot with allocation id 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,358 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from CREATED to DEPLOYING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,358 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,359 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) [DEPLOYING].
+docker-taskmanager-1  | 2026-03-03 10:58:01,364 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Received task Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0), deploy into slot with allocation id 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,365 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from CREATED to DEPLOYING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,365 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Activate slot 1cf9a27df408ce7d3d2a444335bc672d.
+docker-taskmanager-1  | 2026-03-03 10:58:01,365 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Loading JAR files for task Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) [DEPLOYING].
+docker-taskmanager-1  | 2026-03-03 10:58:01,377 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@34436cb4
+docker-taskmanager-1  | 2026-03-03 10:58:01,377 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@1ab0fded
+docker-taskmanager-1  | 2026-03-03 10:58:01,377 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - No state backend has been configured, using default (HashMap) org.apache.flink.runtime.state.hashmap.HashMapStateBackend@1dafc94e
+docker-taskmanager-1  | 2026-03-03 10:58:01,377 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+docker-taskmanager-1  | 2026-03-03 10:58:01,377 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+docker-taskmanager-1  | 2026-03-03 10:58:01,378 INFO  org.apache.flink.runtime.state.StateBackendLoader            [] - State backend loader loads the state backend as HashMapStateBackend
+docker-taskmanager-1  | 2026-03-03 10:58:01,378 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+docker-taskmanager-1  | 2026-03-03 10:58:01,378 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+docker-taskmanager-1  | 2026-03-03 10:58:01,378 INFO  org.apache.flink.streaming.runtime.tasks.StreamTask          [] - Checkpoint storage is set to 'jobmanager'
+docker-taskmanager-1  | 2026-03-03 10:58:01,384 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from DEPLOYING to INITIALIZING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,384 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from DEPLOYING to INITIALIZING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,384 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,388 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Sink (1/1) (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from DEPLOYING to INITIALIZING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,388 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Work (1/1) (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from DEPLOYING to INITIALIZING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,389 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Source (1/1) (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from DEPLOYING to INITIALIZING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,493 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from INITIALIZING to RUNNING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,494 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from INITIALIZING to RUNNING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,496 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Work (1/1) (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from INITIALIZING to RUNNING.
+docker-jobmanager-1   | 2026-03-03 10:58:01,497 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Sink (1/1) (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from INITIALIZING to RUNNING.
+docker-taskmanager-1  | 2026-03-03 10:58:01,553 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+docker-taskmanager-1  | BEGIN GENERATOR
+docker-taskmanager-1  | ***** SPACED LOOP START *****
+docker-jobmanager-1   | 2026-03-03 10:58:01,556 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Source (1/1) (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from INITIALIZING to RUNNING.
+docker-taskmanager-1  | ***** SPACED LOOP FINISH *****
+docker-taskmanager-1  | END GENERATOR
+docker-taskmanager-1  | Elapsed Time: 120149
+docker-taskmanager-1  | 2026-03-03 11:00:01,722 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to FINISHED.
+docker-taskmanager-1  | Work Simulator finished.
+docker-taskmanager-1  | Work Execution time: 120
+docker-taskmanager-1  | 2026-03-03 11:00:01,723 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Source: Source (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0).
+docker-taskmanager-1  | 2026-03-03 11:00:01,725 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from RUNNING to FINISHED.
+docker-taskmanager-1  | 2026-03-03 11:00:01,725 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Work (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0).
+docker-taskmanager-1  | 120000
+docker-taskmanager-1  | Sink Execution time: 120 seconds
+docker-taskmanager-1  | 2026-03-03 11:00:01,727 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FINISHED to JobManager for task Source: Source (1/1)#0 6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0.
+docker-taskmanager-1  | 2026-03-03 11:00:01,734 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from RUNNING to FINISHED.
+docker-taskmanager-1  | 2026-03-03 11:00:01,736 INFO  org.apache.flink.runtime.taskmanager.Task                    [] - Freeing task resources for Sink: Sink (1/1)#0 (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0).
+docker-taskmanager-1  | 2026-03-03 11:00:01,747 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FINISHED to JobManager for task Work (1/1)#0 6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0.
+docker-taskmanager-1  | 2026-03-03 11:00:01,748 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Un-registering task and sending final execution state FINISHED to JobManager for task Sink: Sink (1/1)#0 6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0.
+docker-jobmanager-1   | 2026-03-03 11:00:01,756 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Source: Source (1/1) (6d43fe17fc92a44e5374108eaf11c151_bc764cd8ddf7a0cff126f51c16239658_0_0) switched from RUNNING to FINISHED.
+docker-jobmanager-1   | 2026-03-03 11:00:01,761 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Work (1/1) (6d43fe17fc92a44e5374108eaf11c151_0a448493b4782967b150582570326227_0_0) switched from RUNNING to FINISHED.
+docker-jobmanager-1   | 2026-03-03 11:00:01,762 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Sink: Sink (1/1) (6d43fe17fc92a44e5374108eaf11c151_ea632d67b7d595e5b851708ae9ad79d6_0_0) switched from RUNNING to FINISHED.
+docker-jobmanager-1   | 2026-03-03 11:00:01,764 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Clearing resource requirements of job cf131c07b0ac183c96f31bda78c5f88c
+docker-jobmanager-1   | 2026-03-03 11:00:01,766 INFO  org.apache.flink.runtime.executiongraph.ExecutionGraph       [] - Job Rate-controlled Streaming WordCount (cf131c07b0ac183c96f31bda78c5f88c) switched from state RUNNING to FINISHED.
+docker-jobmanager-1   | 2026-03-03 11:00:01,767 INFO  org.apache.flink.runtime.checkpoint.CheckpointCoordinator    [] - Stopping checkpoint coordinator for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 11:00:01,771 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job cf131c07b0ac183c96f31bda78c5f88c reached terminal state FINISHED.
+docker-jobmanager-1   | 2026-03-03 11:00:01,774 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Job cf131c07b0ac183c96f31bda78c5f88c has been registered for cleanup in the JobResultStore after reaching a terminal state.
+docker-jobmanager-1   | 2026-03-03 11:00:01,777 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Stopping the JobMaster for job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 11:00:01,780 INFO  org.apache.flink.runtime.checkpoint.StandaloneCompletedCheckpointStore [] - Shutting down
+docker-jobmanager-1   | 2026-03-03 11:00:01,781 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Disconnect TaskExecutor 172.18.0.3:41069-d6420b because: Stopping JobMaster for job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 11:00:01,781 INFO  org.apache.flink.runtime.jobmaster.slotpool.DefaultDeclarativeSlotPool [] - Releasing slot [1cf9a27df408ce7d3d2a444335bc672d].
+docker-jobmanager-1   | 2026-03-03 11:00:01,781 INFO  org.apache.flink.runtime.jobmaster.JobMaster                 [] - Close ResourceManager connection f956923b5f2ec4d0b48def572cb56e33: Stopping JobMaster for job 'Rate-controlled Streaming WordCount' (cf131c07b0ac183c96f31bda78c5f88c).
+docker-jobmanager-1   | 2026-03-03 11:00:01,782 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Disconnect job manager 00000000000000000000000000000000@akka.tcp://flink@jobmanager:6123/user/rpc/jobmanager_2 for job cf131c07b0ac183c96f31bda78c5f88c from the resource manager.
+docker-taskmanager-1  | 2026-03-03 11:00:01,788 INFO  org.apache.flink.runtime.taskexecutor.slot.TaskSlotTableImpl [] - Free slot TaskSlot(index:0, state:ACTIVE, resource profile: ResourceProfile{cpuCores=1, taskHeapMemory=384.000mb (402653174 bytes), taskOffHeapMemory=0 bytes, managedMemory=512.000mb (536870920 bytes), networkMemory=128.000mb (134217730 bytes)}, allocationId: 1cf9a27df408ce7d3d2a444335bc672d, jobId: cf131c07b0ac183c96f31bda78c5f88c).
+docker-taskmanager-1  | 2026-03-03 11:00:01,789 INFO  org.apache.flink.runtime.taskexecutor.DefaultJobLeaderService [] - Remove job cf131c07b0ac183c96f31bda78c5f88c from job leader monitoring.
+docker-taskmanager-1  | 2026-03-03 11:00:01,790 INFO  org.apache.flink.runtime.taskexecutor.TaskExecutor           [] - Close JobManager connection for job cf131c07b0ac183c96f31bda78c5f88c.
+docker-jobmanager-1   | 2026-03-03 11:00:02,463 INFO  org.apache.flink.client.deployment.application.ApplicationDispatcherBootstrap [] - Application completed SUCCESSFULLY
+docker-jobmanager-1   | 2026-03-03 11:00:02,465 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Shutting StandaloneApplicationClusterEntryPoint down with application status SUCCEEDED. Diagnostics null.
+docker-jobmanager-1   | 2026-03-03 11:00:02,474 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Shutting down rest endpoint.
+docker-jobmanager-1   | 2026-03-03 11:00:02,504 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Removing cache directory /tmp/flink-web-45743459-ab2e-4ae8-8451-c6601ea1d257/flink-web-ui
+docker-jobmanager-1   | 2026-03-03 11:00:02,505 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - http://jobmanager:8081 lost leadership
+docker-jobmanager-1   | 2026-03-03 11:00:02,505 INFO  org.apache.flink.runtime.jobmaster.MiniDispatcherRestEndpoint [] - Shut down complete.
+docker-jobmanager-1   | 2026-03-03 11:00:02,509 INFO  org.apache.flink.runtime.resourcemanager.StandaloneResourceManager [] - Shut down cluster because application is in SUCCEEDED, diagnostics null.
+docker-jobmanager-1   | 2026-03-03 11:00:02,509 INFO  org.apache.flink.runtime.entrypoint.component.DispatcherResourceManagerComponent [] - Closing components.
+docker-jobmanager-1   | 2026-03-03 11:00:02,510 INFO  org.apache.flink.runtime.dispatcher.runner.SessionDispatcherLeaderProcess [] - Stopping SessionDispatcherLeaderProcess.
+docker-jobmanager-1   | 2026-03-03 11:00:02,510 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Stopping resource manager service.
+docker-jobmanager-1   | 2026-03-03 11:00:02,510 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Stopping dispatcher akka.tcp://flink@jobmanager:6123/user/rpc/dispatcher_0.
+docker-jobmanager-1   | 2026-03-03 11:00:02,510 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Stopping all currently running jobs of dispatcher akka.tcp://flink@jobmanager:6123/user/rpc/dispatcher_0.
+docker-jobmanager-1   | 2026-03-03 11:00:02,511 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Stopping credential renewal
+docker-jobmanager-1   | 2026-03-03 11:00:02,511 INFO  org.apache.flink.runtime.security.token.DefaultDelegationTokenManager [] - Stopped credential renewal
+docker-jobmanager-1   | 2026-03-03 11:00:02,511 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Closing the slot manager.
+docker-jobmanager-1   | 2026-03-03 11:00:02,511 INFO  org.apache.flink.runtime.resourcemanager.slotmanager.DeclarativeSlotManager [] - Suspending the slot manager.
+docker-jobmanager-1   | 2026-03-03 11:00:02,512 INFO  org.apache.flink.runtime.dispatcher.StandaloneDispatcher     [] - Stopped dispatcher akka.tcp://flink@jobmanager:6123/user/rpc/dispatcher_0.
+docker-jobmanager-1   | 2026-03-03 11:00:02,513 INFO  org.apache.flink.runtime.resourcemanager.ResourceManagerServiceImpl [] - Resource manager service is not running. Ignore revoking leadership.
+docker-jobmanager-1   | 2026-03-03 11:00:02,516 INFO  org.apache.flink.runtime.blob.BlobServer                     [] - Stopped BLOB server at 0.0.0.0:6124
+docker-jobmanager-1   | 2026-03-03 11:00:02,520 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Stopping Akka RPC service.
+docker-jobmanager-1   | 2026-03-03 11:00:02,524 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Stopping Akka RPC service.
+docker-jobmanager-1   | 2026-03-03 11:00:02,539 INFO  akka.actor.CoordinatedShutdown                               [] - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+docker-jobmanager-1   | 2026-03-03 11:00:02,539 INFO  akka.actor.CoordinatedShutdown                               [] - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+docker-jobmanager-1   | 2026-03-03 11:00:02,548 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Shutting down remote daemon.
+docker-jobmanager-1   | 2026-03-03 11:00:02,548 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Shutting down remote daemon.
+docker-jobmanager-1   | 2026-03-03 11:00:02,549 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Remote daemon shut down; proceeding with flushing remote transports.
+docker-jobmanager-1   | 2026-03-03 11:00:02,549 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Remote daemon shut down; proceeding with flushing remote transports.
+docker-jobmanager-1   | 2026-03-03 11:00:02,565 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Remoting shut down.
+docker-jobmanager-1   | 2026-03-03 11:00:02,570 INFO  akka.remote.RemoteActorRefProvider$RemotingTerminator        [] - Remoting shut down.
+docker-jobmanager-1   | 2026-03-03 11:00:02,575 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Stopped Akka RPC service.
+docker-jobmanager-1   | 2026-03-03 11:00:02,586 INFO  org.apache.flink.runtime.rpc.akka.AkkaRpcService             [] - Stopped Akka RPC service.
+docker-jobmanager-1   | 2026-03-03 11:00:02,586 INFO  org.apache.flink.runtime.entrypoint.ClusterEntrypoint        [] - Terminating cluster entrypoint process StandaloneApplicationClusterEntryPoint with exit code 0.
+docker-jobmanager-1 exited with code 0

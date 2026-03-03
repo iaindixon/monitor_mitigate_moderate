@@ -1,0 +1,77 @@
+version: "2.2"
+services:
+  jobmanager:
+    image: flink:latest
+    ports:
+      - "8081:8081"
+    command: standalone-job --job-classname ncl.scalable.benchmark_bumbles.flink.wordcount.driver.BenchmarkSimulator --chain-operators ${CHAIN_OPERATORS:-false} --source-rate ${SOURCE_RATE:-10000} --sentence-length ${SENTENCE_LENGTH:-100} --window-size ${WINDOW_SIZE:-1000} --window-limit ${WINDOW_LIMIT:-60} --rolling-size ${ROLLING_SIZE:-0} --spacing-method ${SPACING_METHOD:-0} --cutoff-method ${CUTOFF_METHOD:-0} --arrival-process ${ARRIVAL_PROCESS:-0} --calibration-size ${CALIBRATION_SIZE:-10} --undershoot-factor ${UNDERSHOOT_FACTOR:-1.0} --sleep-amount ${SLEEP_AMOUNT:-0} --work-method ${WORK_METHOD:-0} --step-start ${STEP_START:-10000} --spike-multiplier ${SPIKE_MULTIPLIER:-10} --spike-duration ${SPIKE_DURATION:-2} --work-frequency ${WORK_FREQUENCY:-1000} --middle-chunk ${MIDDLE_CHUNK:-10} --num-steps ${NUM_STEPS:-4} --wave-frequency ${WAVE_FREQUENCY:-2} --calibration-type ${CALIBRATION_TYPE:-0}
+    volumes:
+      - ./arts:/opt/flink/usrlib
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        rest.address: jobmanager
+        metrics.system-resource-probing-interval: 500
+        metrics.reporter.influxdb.factory.class: org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+        metrics.reporter.influxdb.scheme: http
+        metrics.reporter.influxdb.host: metri
+        metrics.reporter.influxdb.port: 8086
+        metrics.reporter.influxdb.db: flink
+        metrics.reporter.influxdb.username: flink-metrics
+        metrics.reporter.influxdb.password: qwerty
+        metrics.reporter.influxdb.retentionPolicy: autogen
+        metrics.reporter.influxdb.consistency: ANY
+        metrics.reporter.influxdb.connectTimeout: 60000
+        metrics.reporter.influxdb.writeTimeout: 60000
+        metrics.reporter.influxdb.interval: 500 ms  
+        taskmanager.network.memory.floating-buffers-per-gate: 8
+        taskmanager.network.memory.buffers-per-channel: 2
+        taskmanager.network.memory.max-overdraft-buffers-per-gate: 0
+        execution.buffer-timeout.interval: 0 ms
+        taskmanager.memory.segment-size: 32 kb
+        taskmanager.network.detailed-metrics: true
+
+  taskmanager:
+    image: flink:latest
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    scale: 1
+    volumes:
+      - ./arts:/opt/flink/usrlib
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager    
+        metrics.system-resource-probing-interval: 500
+        metrics.reporter.influxdb.factory.class: org.apache.flink.metrics.influxdb.InfluxdbReporterFactory
+        metrics.reporter.influxdb.scheme: http
+        metrics.reporter.influxdb.host: metri
+        metrics.reporter.influxdb.port: 8086
+        metrics.reporter.influxdb.db: flink
+        metrics.reporter.influxdb.username: flink-metrics
+        metrics.reporter.influxdb.password: qwerty
+        metrics.reporter.influxdb.retentionPolicy: autogen
+        metrics.reporter.influxdb.consistency: ANY
+        metrics.reporter.influxdb.connectTimeout: 60000
+        metrics.reporter.influxdb.writeTimeout: 60000
+        metrics.reporter.influxdb.interval: 500 ms
+        taskmanager.network.memory.floating-buffers-per-gate: 8
+        taskmanager.network.memory.buffers-per-channel: 2
+        taskmanager.network.memory.max-overdraft-buffers-per-gate: 0
+        execution.buffer-timeout.interval: 0 ms
+        taskmanager.memory.segment-size: 32 kb
+        taskmanager.network.detailed-metrics: true
+  metri:
+    image: influxdb:1.8.4
+    depends_on:
+      - jobmanager
+    container_name: influxdb
+    restart: always
+    environment:
+      - INFLUXDB_DB=flink
+      - INFLUXDB_ADMIN_USER=flink-metrics
+      - INFLUXDB_ADMIN_PASSWORD=qwertyqwerty
+    ports:
+      - '8086:8086'
