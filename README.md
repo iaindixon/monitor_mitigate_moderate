@@ -2,6 +2,21 @@
 
 This project is an exploration into design decisions that can be made when benchmarking stream processing engines. Built on top of the [DS2](https://github.com/strymon-system/ds2) wordcount implementation we modify the generator function to include spacing between records within a transmission window, and cutoff functionality to end a window and avoid violating the constraints of a rate.
 
+When cloned, the folder structure should be as follows:
+```
+| README.md
+| analysis/
+| docker/
+| java/
+```
+###### **Analysis**
+The `analysis/` folder contains a simplified R ProjectTemplate, where the `analysis/src/` folder holds the files to generate the graphics used in the paper, `analysis/data/` folder holds the data files extracted from running experiments, and `analysis/graphs` folder holds the graphics produced. 
+
+###### **Docker**
+The `docker/` folder contains all of the specific experiment runs seen in the paper, as well as a general purpose `loop_executable.bash` and `run_experiment.bash` files to allow you to implement any specific combination that you wish. 
+
+###### **Java**
+The `java/` folder contains the java code used to build the MMM pipeline. To create the executable, open this folder in IntelliJ and create a package which you can move into the docker folder using the instructions below. 
 
 ## Installation Instructions
 This experiment records two sets of metrics - custom metrics developed by authors and built-in Flink metrics. Flink metrics are saved in an InfluxDB timeseries database, but we use version Influx@1 which has slightly different install instructions.
@@ -51,12 +66,12 @@ These instructions assume a Unix-like system.
     all_at_once_no_cutoff
     ```
 
-## Generated Directory Stucture
-
-For an example of generated file structure, we will look at the results of running the `pre_mitigation.bash` file:
-```
-| experiment
-  |-- all_at_once_no_cutoff
+   #### Generated Directory Stucture
+   
+   For an example of generated file structure, we will look at the results of running the `pre_mitigation.bash` file:
+   ```
+   | experiment
+   |-- all_at_once_no_cutoff
       |-- uniform
         |-- constant
             |-- 1000
@@ -72,13 +87,25 @@ For an example of generated file structure, we will look at the results of runni
                   |-- run1/
                |-- 1000.1.20.10
                   |-- run1/
-```
-In the innermost file structure for an individual run given a window and rate parameter, we have
-- `generator.csv` which is the mostly sanitised csv removing the non-parameter reporting lines from the console during an experimental run
-- `output.txt` which contains the complete dirty console output during an experimental run
-- `influxdb` which is a directory containing a snapshot of the flink metrics db at the end of an experimental run
+   ```
+   In the innermost file structure for an individual run given a window and rate parameter, we have
+   - `generator.csv` which is the mostly sanitised csv removing the non-parameter reporting lines from the console during an experimental run
+   - `output.txt` which contains the complete dirty console output during an experimental run
+   - `influxdb` which is a directory containing a snapshot of the flink metrics db at the end of an experimental run
 
 5. Once we have the custom metrics extracted directly into the run1 folders, we can get the Flink metrics using InfluxDB by running the corresponding `*_metrics.bash` file, so for the above experiment `pre_mitigation.bash` we run the  `pre_mitigation_metrics.bash` file. This also grabs the corresponding experiment file in `experiments/` and moved it into the `analysis/data` folder for analysis in R automatically.
+   ```bash
+   $ ls experiment/
+   all_at_once_no_cutoff
+   $ bash pre_mitigation_metrics.bash
+   ... Lots of InfluxDB data loading ...
+   ... Moving results to analysis/data ...
+   $ ls experiment/
+   $ ls ../analysis/data
+   all_at_once_no_cutoff
+   ```
+
+6. To replicate the results in the paper, repeat the above process for the `post_mitigation.bash` and `spacing.bash` files as well. Now, open up RStudio on the `analysis/` folder, and set the working directory to that location. Execute the lines in `analysis/src/paper_example.R` to produce the graphics seen in the paper (subject to some minor differences due to stochastic results). 
 
 ## Manually Loading Flink Metrics iva InfluxDB
 After an experimental run has been conducted we create an `influxdb` folder which contains two files: `flink.autogen.00001.00` and `meta.00`.
@@ -94,3 +121,6 @@ For example to get the backPressuredTimeMSPerSecond metric:
 ```bash
    $ influx -database "flink" -execute "SELECT * FROM taskmanager_job_task_backPressuredTimeMsPerSecond" -format csv > path_to_location/taskmanager_job_task_backPressuredTimeMsPerSecond.csv
 ```
+
+## Common Issues
+If you attempt to run the experiment files, and the docker containers say that they can't launch the Flink cluster, go ahead and remove the containers from your machine. A fresh instance will allow you to run. 
